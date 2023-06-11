@@ -5,8 +5,8 @@ all:
 	rm -rf rebar.lock;
 	mkdir ebin;		
 	rebar3 compile;	
-	cp _build/default/lib/*/ebin/* ebin;
 	rm -rf _build*;
+	rm -rf ebin;
 	git add  *;
 	git commit -m $(m);
 	git push;
