@@ -19,7 +19,7 @@
 
 %% API
 -export([
-	 send_msg/3,
+	 %send_msg/3,
 	 send_msg/6
 	 ]).
 
@@ -47,8 +47,8 @@
 %% @spec
 %% @end
 %%--------------------------------------------------------------------
-send_msg(HostSpec,Msg,TimeOut)->
-    gen_server:call(?SERVER, {send_msg,HostSpec,Msg,TimeOut},infinity).
+%send_msg(HostSpec,Msg,TimeOut)->
+ %   gen_server:call(?SERVER, {send_msg,HostSpec,Msg,TimeOut},infinity).
 
 send_msg(Ip,Port,User,Password,Msg,TimeOut)->
     gen_server:call(?SERVER, {send_msg,Ip,Port,User,Password,Msg,TimeOut},infinity).
